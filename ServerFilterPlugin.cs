@@ -31,7 +31,7 @@ namespace ServerFilterPlugin
 				if (code.LoadsField(AccessTools.Field(typeof(MyCachedServerItem), "Server")))
 				{
 					yield return code;
-					yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Patches), nameof(FixServerInfo)));
+					yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(ServerFilterPlugin), nameof(FixServerInfo)));
 				}
 				else
 					yield return code;
